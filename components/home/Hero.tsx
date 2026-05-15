@@ -61,7 +61,7 @@ export function Hero() {
             variants={heroItem}
             className="max-w-xl text-[15px] leading-[1.6] text-[var(--text-secondary)] md:max-w-2xl md:text-[17px]"
           >
-            We pair premium web craft, AI automation, and performance media to convert attention into predictable revenue. Stop managing five different agencies.
+            We pair premium web craft, AI automation and performance media to convert attention into predictable revenue. Stop managing five different agencies.
           </motion.p>
 
           <motion.div variants={heroItem} className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
