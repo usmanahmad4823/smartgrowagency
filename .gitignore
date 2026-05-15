@@ -26,10 +26,6 @@ yarn-error.log*
 .env*.local
 
 # Prisma
-prisma/dev.db
-prisma/dev.db-journal
-prisma/dev.db-shm
-prisma/dev.db-wal
 
 # Vercel
 .vercel
