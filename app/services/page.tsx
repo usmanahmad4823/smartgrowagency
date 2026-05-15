@@ -22,7 +22,7 @@ export default function ServicesPage() {
             Everything your brand needs to win online—without the vendor maze.
           </h1>
           <p className="text-[15px] leading-relaxed text-[var(--text-secondary)]">
-            Pick a lane to see how we work with your team, what you get, and where it shows up in your funnel. Every
+            Pick a lane to see how we work with your team, what you get and where it shows up in your funnel. Every
             engagement ends with a clear next step—usually a proposal you can approve in one sitting.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
