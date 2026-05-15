@@ -6,7 +6,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://smartgrowagency.com",
   email: "hellosmartgrowagency@gmail.com",
   phone: "+923488386724",
-  // address: "San Francisco, CA",
+  address: "Remote / Worldwide",
   hours: "Mon–Fri · 9:00–18:00 PT",
   whatsappNumber: "923488386724",
   social: {
