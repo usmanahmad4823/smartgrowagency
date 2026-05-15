@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* Light theme (default :root — next-themes adds .dark on <html> for dark mode) */
+:root {
+  --bg-primary: #fafafa;
+  --bg-secondary: #f5f5f7;
+  --bg-tertiary: #ececed;
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-tertiary: #86868b;
+  --accent-blue: #0071e3;
+  --accent-blue-hover: #0077ed;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --nav-pill-bg: rgba(255, 255, 255, 0.25);
+  --nav-pill-bg-scrolled: rgba(255, 255, 255, 0.5);
+  --footer-card-glow: radial-gradient(120% 80% at 0% 0%, rgba(0, 113, 227, 0.12), transparent 55%);
+  --mobile-overlay: rgba(250, 250, 250, 0.96);
+  --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-body: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --radius-card: 18px;
+  --radius-footer: 28px;
+  --max-content: 1200px;
+  --text-body: 13px;
+  --text-body-lg: 14px;
+  --text-nav: 12px;
+  --text-caption: 10px;
+  --hero-blob: rgba(0, 0, 0, 0.04);
+  --hero-blob-strong: rgba(0, 113, 227, 0.07);
+  --hero-radial: radial-gradient(circle at 50% 20%, rgba(0, 113, 227, 0.08), transparent 55%);
+  --nav-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #1d1d1f;
+  --bg-tertiary: #2c2c2e;
+  --text-primary: #f5f5f7;
+  --text-secondary: #a1a1a6;
+  --text-tertiary: #6e6e73;
+  --accent-blue: #2997ff;
+  --accent-blue-hover: #0071e3;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --nav-pill-bg: rgba(29, 29, 31, 0.25);
+  --nav-pill-bg-scrolled: rgba(0, 0, 0, 0.4);
+  --footer-card-glow: radial-gradient(120% 80% at 0% 0%, rgba(41, 151, 255, 0.14), transparent 50%);
+  --mobile-overlay: rgba(0, 0, 0, 0.94);
+  --hero-blob: rgba(255, 255, 255, 0.035);
+  --hero-blob-strong: rgba(255, 255, 255, 0.03);
+  --hero-radial: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.06), transparent 55%);
+  --nav-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+}
+
+@theme inline {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-accent-blue: var(--accent-blue);
+  --color-accent-blue-hover: var(--accent-blue-hover);
+  --font-sans: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.55;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+}
+
+.container-content {
+  width: 100%;
+  max-width: var(--max-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-y {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .section-y {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-y {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.logo-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.prose-mdx {
+  color: var(--text-secondary);
+}
+
+.prose-mdx h2,
+.prose-mdx h3 {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-mdx a {
+  color: var(--accent-blue);
+}
+
+.prose-mdx code {
+  font-size: 0.9em;
+}
+
+.prose-mdx pre {
+  border-radius: 14px;
+  border: 1px solid var(--border-subtle);
+  overflow-x: auto;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
