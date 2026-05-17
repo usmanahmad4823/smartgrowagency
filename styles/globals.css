@@ -239,3 +239,31 @@ button:focus-visible {
   outline: 2px solid var(--accent-blue);
   outline-offset: 2px;
 }
+
+/* 1111% Responsive Smooth Scroll & Hide scrollbars for slick swipers */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  -webkit-overflow-scrolling: touch; /* Smooth iOS momentum scrolling */
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Fluid spacing & text handling on ultra-small (under 360px) mobile screens */
+@media (max-width: 360px) {
+  .container-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  h1 {
+    font-size: 28px !important;
+  }
+  h2 {
+    font-size: 22px !important;
+  }
+  .section-y {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
