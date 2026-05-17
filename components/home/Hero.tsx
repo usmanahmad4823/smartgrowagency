@@ -111,19 +111,19 @@ export function Hero() {
           className="mt-12 grid gap-3 sm:grid-cols-3 sm:gap-4"
         >
           <div className="glass-card flex flex-col gap-1.5 p-4 md:p-5">
-            <AnimatedCounter to={200} suffix="+" />
+            <AnimatedCounter to={31} suffix="+" />
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">
               Projects shipped with measurable lift
             </p>
           </div>
           <div className="glass-card flex flex-col gap-1.5 p-4 md:p-5">
-            <AnimatedCounter to={98} suffix="%" />
+            <AnimatedCounter to={100} suffix="%" />
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">
               Clients who renew after the first win
             </p>
           </div>
           <div className="glass-card flex flex-col gap-1.5 p-4 md:p-5">
-            <AnimatedCounter to={50} suffix="+" />
+            <AnimatedCounter to={10} suffix="+" />
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">
               Brands partnered across industries
             </p>
