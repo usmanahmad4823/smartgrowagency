@@ -15,9 +15,9 @@ const chips = ["ROI-led delivery", "200+ launches", "Remote-first pod"];
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--bg-primary)] pb-8 pt-12 md:pb-12 md:pt-16">
+    <footer className="glass-panel pb-8 pt-12 md:pb-12 md:pt-16">
       <div className="container-content">
-        <div className="relative overflow-hidden rounded-[var(--radius-footer)] border border-[var(--border-subtle)] bg-[var(--bg-secondary)] px-6 py-10 md:px-10 md:py-12">
+        <div className="relative overflow-hidden rounded-[var(--radius-footer)] border border-[var(--border-subtle)] glass-panel-secondary px-6 py-10 md:px-10 md:py-12">
           <div
             className="pointer-events-none absolute inset-0 opacity-100"
             style={{ backgroundImage: "var(--footer-card-glow)" }}

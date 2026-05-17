@@ -37,7 +37,7 @@ export function ExitIntentModal() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="exit-title"
-            className="max-w-lg rounded-[20px] border border-[var(--border-subtle)] bg-[var(--bg-secondary)] p-8 text-center"
+            className="max-w-lg rounded-[20px] border border-[var(--border-subtle)] glass-panel-secondary p-8 text-center"
             onClick={(e) => e.stopPropagation()}
           >
             <p id="exit-title" className="font-display text-[28px] font-semibold tracking-[-0.02em] text-[var(--text-primary)]">

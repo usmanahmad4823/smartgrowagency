@@ -10,7 +10,7 @@ import { services } from "@/lib/services";
 
 export function ServicesSection() {
   return (
-    <section id="services" className="section-y bg-[var(--bg-primary)]">
+    <section id="services" className="section-y glass-panel">
       <div className="container-content">
         <SectionHeader
           eyebrow="WHAT WE DO"
@@ -27,27 +27,47 @@ export function ServicesSection() {
         >
           {services.map((service) => (
             <motion.div key={service.slug} variants={fadeUpItem}>
-              <Card className="group h-full p-7 hover:scale-[1.02]">
-                <div className="flex items-start gap-4">
-                  <span
-                    className="mt-1 h-2 w-2 rounded-full"
-                    style={{ backgroundColor: service.accent, opacity: 0.85 }}
-                    aria-hidden
-                  />
+              <Card 
+                className="glass-3d-hover relative overflow-hidden group h-full p-7"
+                style={{
+                  backgroundColor: `${service.accent}08`, 
+                  borderColor: `${service.accent}30`
+                }}
+              >
+                {/* Massive Colorful Background Glow */}
+                <div 
+                  className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full opacity-40 blur-[50px] transition-all duration-700 group-hover:scale-[1.8] group-hover:opacity-70"
+                  style={{ backgroundColor: service.accent }}
+                />
+                <div 
+                  className="pointer-events-none absolute -bottom-12 -left-12 h-32 w-32 rounded-full opacity-20 blur-[40px] transition-all duration-700 group-hover:scale-150 group-hover:opacity-50"
+                  style={{ backgroundColor: service.accent }}
+                />
+
+                <div className="relative z-10 flex items-start gap-4 md:gap-5">
+                  {/* Solid Vibrant Icon Box */}
+                  <div 
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] text-white shadow-xl transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3"
+                    style={{ 
+                      backgroundColor: service.accent,
+                      boxShadow: `inset 0 2px 4px rgba(255,255,255,0.4), 0 8px 24px ${service.accent}60`
+                    }}
+                  >
+                    <service.icon className="h-6 w-6" aria-hidden />
+                  </div>
+
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3 text-[var(--text-primary)]">
-                      <service.icon className="h-6 w-6 text-[var(--text-secondary)]" aria-hidden />
-                      <h3 className="font-display text-[19px] font-semibold leading-[1.2] tracking-[-0.015em] md:text-[22px]">
-                        {service.title}
-                      </h3>
-                    </div>
-                    <p className="text-[13px] leading-[1.6] text-[var(--text-secondary)]">{service.short}</p>
+                    <h3 className="font-display text-[20px] font-bold leading-[1.2] tracking-[-0.015em] text-[var(--text-primary)] md:text-[22px]">
+                      {service.title}
+                    </h3>
+                    <p className="text-[13px] leading-[1.6] text-[var(--text-secondary)] font-medium">{service.short}</p>
                     <Link
                       href={`/services#${service.slug}`}
-                      className="inline-flex items-center gap-2 text-[12px] font-semibold text-[var(--accent-blue)] transition-colors hover:text-[var(--accent-blue-hover)]"
+                      className="inline-flex items-center gap-1.5 text-[13px] font-bold transition-all hover:gap-2"
+                      style={{ color: service.accent }}
                     >
                       Learn more
-                      <ArrowUpRight size={16} />
+                      <ArrowUpRight size={18} strokeWidth={2.5} />
                     </Link>
                   </div>
                 </div>

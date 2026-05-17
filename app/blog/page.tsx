@@ -22,7 +22,7 @@ export default async function BlogPage({ searchParams }: Props) {
   const posts = await getBlogPosts(undefined, active === "All" ? null : active);
 
   return (
-    <div className="bg-[var(--bg-primary)]">
+    <div className="glass-panel">
       <section className="section-y border-b border-[var(--border-subtle)]">
         <div className="container-content max-w-4xl space-y-6">
           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)]">BLOG</p>

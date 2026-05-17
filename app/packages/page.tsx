@@ -21,7 +21,7 @@ export default function PackagesPage() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi,%20I%20want%20to%20know%20more%20about%20your%20packages`;
 
   return (
-    <div className="bg-[var(--bg-primary)]">
+    <div className="glass-panel">
       {/* Hero & Packages Toggle */}
       <section className="section-y border-b border-[var(--border-subtle)] overflow-hidden">
         <div className="container-content space-y-12">
@@ -43,7 +43,7 @@ export default function PackagesPage() {
       </section>
 
       {/* Comparison Table */}
-      <section className="section-y bg-[var(--bg-secondary)]">
+      <section className="section-y glass-panel-secondary">
         <div className="container-content space-y-10">
           <SectionHeader
             eyebrow="COMPARE"
@@ -68,7 +68,7 @@ export default function PackagesPage() {
       </section>
 
       {/* Payment Methods */}
-      <section className="section-y bg-[var(--bg-secondary)]">
+      <section className="section-y glass-panel-secondary">
         <div className="container-content">
           <PaymentMethods />
         </div>
@@ -88,7 +88,7 @@ export default function PackagesPage() {
       </section>
 
       {/* Bottom CTA Banner */}
-      <section className="border-t border-[var(--border-subtle)] bg-[var(--bg-secondary)] py-20 md:py-32">
+      <section className="border-t border-[var(--border-subtle)] glass-panel-secondary py-20 md:py-32">
         <div className="container-content flex flex-col items-center text-center space-y-8">
           <div className="max-w-2xl space-y-4">
             <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] md:text-[48px]">

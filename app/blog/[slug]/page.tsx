@@ -37,7 +37,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   return (
-    <article className="bg-[var(--bg-primary)]">
+    <article className="glass-panel">
       <header className="border-b border-[var(--border-subtle)]">
         <div className="container-content section-y max-w-3xl space-y-4">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--accent-blue)]">{post.category}</p>
@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="prose-mdx">
           <MdxContent source={post.contentMdx} />
         </div>
-        <div className="mt-12 rounded-[18px] border border-[var(--border-subtle)] bg-[var(--bg-secondary)] p-6 text-[13px] text-[var(--text-secondary)]">
+        <div className="mt-12 rounded-[18px] border border-[var(--border-subtle)] glass-panel-secondary p-6 text-[13px] text-[var(--text-secondary)]">
           Want this rigor on your roadmap?{" "}
           <Link className="font-semibold text-[var(--accent-blue)] hover:text-[var(--accent-blue-hover)]" href="/contact">
             Request a proposal →

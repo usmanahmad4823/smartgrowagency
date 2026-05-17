@@ -9,7 +9,7 @@ import { fadeUpVariant } from "@/lib/motion";
 
 export function PortfolioPreview({ projects }: { projects: Project[] }) {
   return (
-    <section className="section-y bg-[var(--bg-secondary)]">
+    <section className="section-y glass-panel-secondary">
       <div className="container-content">
         <SectionHeader
           eyebrow="PORTFOLIO"
@@ -31,7 +31,7 @@ export function PortfolioPreview({ projects }: { projects: Project[] }) {
             <motion.article
               key={project.id}
               variants={fadeUpVariant}
-              className="group relative overflow-hidden rounded-[18px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)]"
+              className="group relative overflow-hidden rounded-[18px] border border-[var(--border-subtle)] glass-panel-tertiary"
             >
               <Link href={`/portfolio/${project.slug}`} className="block">
                 <div className="relative aspect-[4/3] overflow-hidden">

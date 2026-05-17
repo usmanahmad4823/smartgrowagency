@@ -16,7 +16,7 @@ export function FAQSection() {
         return (
           <div
             key={index}
-            className="rounded-[16px] border border-[var(--border-subtle)] bg-[var(--glass-bg)] overflow-hidden transition-colors hover:bg-[var(--bg-secondary)]"
+            className="rounded-[16px] border border-[var(--border-subtle)] bg-[var(--glass-bg)] overflow-hidden transition-colors hover:glass-panel-secondary"
           >
             <button
               onClick={() => setOpenIndex(isOpen ? null : index)}
@@ -25,7 +25,7 @@ export function FAQSection() {
               <span className="font-display text-[16px] font-semibold text-[var(--text-primary)] pr-4">
                 {faq.q}
               </span>
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-primary)] text-[var(--text-secondary)]">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[var(--border-subtle)] glass-panel text-[var(--text-secondary)]">
                 {isOpen ? <Minus size={14} /> : <Plus size={14} />}
               </div>
             </button>

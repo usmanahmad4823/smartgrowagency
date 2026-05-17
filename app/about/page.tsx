@@ -38,7 +38,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="bg-[var(--bg-primary)]">
+    <div className="glass-panel">
       <section className="section-y border-b border-[var(--border-subtle)]">
         <div className="container-content max-w-4xl space-y-6">
           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)]">ABOUT</p>
@@ -56,7 +56,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section-y bg-[var(--bg-secondary)]">
+      <section className="section-y glass-panel-secondary">
         <div className="container-content grid gap-10 lg:grid-cols-2 lg:items-center">
           <div className="space-y-4">
             <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)]">STORY</p>
@@ -89,7 +89,7 @@ export default function AboutPage() {
       </section>
 
 
-      <section className="section-y bg-[var(--bg-secondary)]">
+      <section className="section-y glass-panel-secondary">
         <div className="container-content space-y-10">
           <SectionHeader
             eyebrow="VALUES"

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 
 export function PackagesPreview() {
   return (
-    <section className="section-y bg-[var(--bg-secondary)]">
+    <section className="section-y glass-panel-secondary">
       <div className="container-content space-y-12">
         <SectionHeader
           eyebrow="PRICING"

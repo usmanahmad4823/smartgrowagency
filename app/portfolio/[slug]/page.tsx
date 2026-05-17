@@ -70,7 +70,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
   const stack = parseStack(project.techStack);
 
   return (
-    <article className="bg-[var(--bg-primary)]">
+    <article className="glass-panel">
       <section className="border-b border-[var(--border-subtle)]">
         <div className="container-content section-y space-y-6">
           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)]">
@@ -108,7 +108,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
         </div>
       </section>
 
-      <section className="section-y bg-[var(--bg-secondary)]">
+      <section className="section-y glass-panel-secondary">
         <div className="container-content space-y-4">
           <h2 className="font-display text-[32px] font-semibold tracking-[-0.02em]">Results</h2>
           <p className="max-w-3xl text-[17px] leading-relaxed text-[var(--text-secondary)]">{project.results}</p>
@@ -129,7 +129,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
       </section>
 
       {project.testimonial ? (
-        <section className="section-y bg-[var(--bg-secondary)]">
+        <section className="section-y glass-panel-secondary">
           <div className="container-content max-w-3xl space-y-4">
             <h2 className="font-display text-[32px] font-semibold tracking-[-0.02em]">Client voice</h2>
             <p className="text-[15px] leading-relaxed text-[var(--text-primary)]">“{project.testimonial}”</p>
@@ -138,7 +138,7 @@ export default async function PortfolioDetailPage({ params }: { params: Promise<
       ) : null}
 
       <section className="section-y">
-        <div className="container-content flex flex-col items-start justify-between gap-4 rounded-[20px] border border-[var(--border-subtle)] bg-[var(--bg-secondary)] p-8 md:flex-row md:items-center">
+        <div className="container-content flex flex-col items-start justify-between gap-4 rounded-[20px] border border-[var(--border-subtle)] glass-panel-secondary p-8 md:flex-row md:items-center">
           <div>
             <p className="font-display text-[22px] font-semibold tracking-[-0.02em]">Want a roadmap like this?</p>
             <p className="mt-2 text-[16px] text-[var(--text-secondary)]">

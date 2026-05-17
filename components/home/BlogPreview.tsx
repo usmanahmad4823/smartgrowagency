@@ -21,7 +21,7 @@ export async function BlogPreview() {
   }
 
   return (
-    <section className="section-y bg-[var(--bg-primary)]">
+    <section className="section-y glass-panel">
       <div className="container-content">
         <SectionHeader
           eyebrow="INSIGHTS"

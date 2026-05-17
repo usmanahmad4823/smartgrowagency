@@ -137,7 +137,7 @@ export function ContactForm() {
           <input
             id="name"
             ref={firstFieldRef}
-            className="w-full rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-4 py-3 text-[12px] text-[var(--text-primary)]"
+            className="w-full rounded-[14px] border border-[var(--border-subtle)] glass-panel-tertiary px-4 py-3 text-[12px] text-[var(--text-primary)]"
             value={values.name}
             onChange={onChange("name")}
             autoComplete="name"
@@ -151,7 +151,7 @@ export function ContactForm() {
           <input
             id="email"
             type="email"
-            className="w-full rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-4 py-3 text-[12px] text-[var(--text-primary)]"
+            className="w-full rounded-[14px] border border-[var(--border-subtle)] glass-panel-tertiary px-4 py-3 text-[12px] text-[var(--text-primary)]"
             value={values.email}
             onChange={onChange("email")}
             autoComplete="email"
@@ -166,7 +166,7 @@ export function ContactForm() {
         </label>
         <input
           id="phone"
-          className="w-full rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-4 py-3 text-[12px] text-[var(--text-primary)]"
+          className="w-full rounded-[14px] border border-[var(--border-subtle)] glass-panel-tertiary px-4 py-3 text-[12px] text-[var(--text-primary)]"
           value={values.phone}
           onChange={onChange("phone")}
           autoComplete="tel"
@@ -181,7 +181,7 @@ export function ContactForm() {
           </label>
           <select
             id="service"
-            className="w-full rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-4 py-3 text-[12px] text-[var(--text-primary)]"
+            className="w-full rounded-[14px] border border-[var(--border-subtle)] glass-panel-tertiary px-4 py-3 text-[12px] text-[var(--text-primary)]"
             value={values.service}
             onChange={onChange("service")}
           >
@@ -202,7 +202,7 @@ export function ContactForm() {
           </label>
           <select
             id="budget"
-            className="w-full rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-4 py-3 text-[12px] text-[var(--text-primary)]"
+            className="w-full rounded-[14px] border border-[var(--border-subtle)] glass-panel-tertiary px-4 py-3 text-[12px] text-[var(--text-primary)]"
             value={values.budget}
             onChange={onChange("budget")}
           >
@@ -226,7 +226,7 @@ export function ContactForm() {
         <textarea
           id="message"
           rows={5}
-          className="w-full rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-4 py-3 text-[12px] text-[var(--text-primary)]"
+          className="w-full rounded-[14px] border border-[var(--border-subtle)] glass-panel-tertiary px-4 py-3 text-[12px] text-[var(--text-primary)]"
           value={values.message}
           onChange={onChange("message")}
         />
@@ -239,7 +239,7 @@ export function ContactForm() {
         </label>
         <select
           id="referral"
-          className="w-full rounded-[14px] border border-[var(--border-subtle)] bg-[var(--bg-tertiary)] px-4 py-3 text-[12px] text-[var(--text-primary)]"
+          className="w-full rounded-[14px] border border-[var(--border-subtle)] glass-panel-tertiary px-4 py-3 text-[12px] text-[var(--text-primary)]"
           value={values.referral}
           onChange={onChange("referral")}
         >

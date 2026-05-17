@@ -24,7 +24,7 @@ export function UrgencyBanner() {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
-          className="border-b border-[var(--border-subtle)] bg-[var(--bg-secondary)] text-[11px] text-[var(--text-secondary)] md:text-[12px]"
+          className="border-b border-[var(--border-subtle)] glass-panel-secondary text-[11px] text-[var(--text-secondary)] md:text-[12px]"
         >
           <div className="container-content flex items-center justify-center gap-3 py-2 text-center">
             <span>

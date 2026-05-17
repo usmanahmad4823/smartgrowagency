@@ -24,7 +24,7 @@ export default async function PortfolioPage({ searchParams }: Props) {
   const projects = await getAllProjects(active === "All" ? null : active);
 
   return (
-    <div className="bg-[var(--bg-primary)]">
+    <div className="glass-panel">
       <section className="section-y border-b border-[var(--border-subtle)]">
         <div className="container-content max-w-4xl space-y-6">
           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)]">PORTFOLIO</p>
@@ -46,7 +46,7 @@ export default async function PortfolioPage({ searchParams }: Props) {
               <Link
                 key={project.id}
                 href={`/portfolio/${project.slug}`}
-                className="mb-6 block break-inside-avoid overflow-hidden rounded-[18px] border border-[var(--border-subtle)] bg-[var(--bg-secondary)]"
+                className="mb-6 block break-inside-avoid overflow-hidden rounded-[18px] border border-[var(--border-subtle)] glass-panel-secondary"
               >
                 <div className="relative aspect-[4/3] w-full">
                   <Image

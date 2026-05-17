@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { ExitIntentModal } from "@/components/site/ExitIntentModal";
 import { LiveChatLoader } from "@/components/site/LiveChatLoader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
+import { GlobalBackground } from "@/components/site/GlobalBackground";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -41,8 +42,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-[var(--bg-primary)] font-body text-[var(--text-primary)] antialiased">
+      <body className="min-h-screen bg-transparent font-body text-[var(--text-primary)] antialiased">
         <ThemeProvider>
+          <GlobalBackground />
           <LiveChatLoader />
           <Navbar />
           <UrgencyBanner />

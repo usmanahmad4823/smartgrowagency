@@ -27,7 +27,7 @@ const videos = [
 
 export function VideoTestimonials() {
   return (
-    <section className="section-y bg-[var(--bg-secondary)]">
+    <section className="section-y glass-panel-secondary">
       <div className="container-content">
         <SectionHeader
           eyebrow="VIDEO"

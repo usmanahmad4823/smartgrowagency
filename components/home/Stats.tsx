@@ -6,7 +6,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 export function Stats() {
   return (
-    <section className="section-y bg-[var(--bg-tertiary)]">
+    <section className="section-y glass-panel-tertiary">
       <div className="container-content">
         <SectionHeader
           eyebrow="RESULTS"
@@ -22,20 +22,20 @@ export function Stats() {
           className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
         >
           <div className="glass-card space-y-3 p-6">
-            <AnimatedCounter to={200} suffix="+" />
-            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Projects delivered with measurable lift</p>
+            <AnimatedCounter to={31} suffix="+" />
+            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Boutique projects delivered with elite execution</p>
           </div>
           <div className="glass-card space-y-3 p-6">
-            <AnimatedCounter to={3} prefix="PKR " suffix="B+" />
-            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Revenue influenced for clients</p>
+            <AnimatedCounter to={9} prefix="PKR " suffix="M+" />
+            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Direct revenue generated for our early clients</p>
           </div>
           <div className="glass-card space-y-3 p-6">
-            <AnimatedCounter to={98} suffix="%" />
-            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Client satisfaction after first delivery</p>
+            <AnimatedCounter to={100} suffix="%" />
+            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Client satisfaction & dedicated retention rate</p>
           </div>
           <div className="glass-card space-y-3 p-6">
-            <AnimatedCounter to={15} suffix="+" />
-            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Countries where teams rely on us</p>
+            <AnimatedCounter to={14} suffix=" Days" />
+            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">Average turnaround to ship initial versions</p>
           </div>
         </motion.div>
 

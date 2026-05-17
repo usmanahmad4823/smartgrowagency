@@ -3,7 +3,7 @@ const logos = ["Northwind", "Helio", "Vertex Labs", "Brightline", "Kite", "Apert
 export function TrustedBy() {
   const doubled = [...logos, ...logos];
   return (
-    <section className="border-y border-[var(--border-subtle)] bg-[var(--bg-primary)] py-10">
+    <section className="border-y border-[var(--border-subtle)] glass-panel py-10">
       <div className="container-content mb-6 text-center">
         <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)] md:text-[11px]">
           Trusted by forward-thinking brands

@@ -37,7 +37,7 @@ export function Process() {
   const scaleX = useTransform(progress, [0, 1], [0.08, 1]);
 
   return (
-    <section className="section-y bg-[var(--bg-primary)]">
+    <section className="section-y glass-panel">
       <div className="container-content">
         <SectionHeader
           eyebrow="PROCESS"
@@ -62,7 +62,7 @@ export function Process() {
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
                 className="relative z-10 space-y-4"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-secondary)] text-[11px] font-semibold text-[var(--text-primary)]">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border-subtle)] glass-panel-secondary text-[11px] font-semibold text-[var(--text-primary)]">
                   {step.n}
                 </div>
                 <h3 className="font-display text-[18px] font-semibold tracking-[-0.015em]">{step.title}</h3>

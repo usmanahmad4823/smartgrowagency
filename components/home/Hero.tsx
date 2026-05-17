@@ -20,7 +20,7 @@ const heroItem = {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-[var(--bg-primary)] pt-8">
+    <section className="relative min-h-[100svh] overflow-hidden glass-panel pt-8">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <motion.div
           className="absolute -left-32 top-24 h-[380px] w-[380px] rounded-full md:h-[420px] md:w-[420px]"
@@ -73,7 +73,7 @@ export function Hero() {
               Get Your Free Growth Plan
               <ArrowRight size={16} className="ml-1" />
             </Button>
-            <Button href="/portfolio" variant="ghost" className="h-12 px-8 text-[13px] hover:bg-[var(--bg-secondary)]">
+            <Button href="/portfolio" variant="ghost" className="h-12 px-8 text-[13px] hover:glass-panel-secondary">
               View Case Studies
             </Button>
           </motion.div>

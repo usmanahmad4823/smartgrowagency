@@ -4,7 +4,7 @@ export function TrustBoosters() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <div className="flex flex-col items-center text-center space-y-3 p-6 glass-card rounded-[18px]">
-        <div className="h-10 w-10 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center border border-[var(--border-subtle)]">
+        <div className="h-10 w-10 rounded-full glass-panel-secondary flex items-center justify-center border border-[var(--border-subtle)]">
           <Banknote size={18} className="text-[var(--text-primary)]" />
         </div>
         <div>
@@ -14,7 +14,7 @@ export function TrustBoosters() {
       </div>
 
       <div className="flex flex-col items-center text-center space-y-3 p-6 glass-card rounded-[18px]">
-        <div className="h-10 w-10 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center border border-[var(--border-subtle)]">
+        <div className="h-10 w-10 rounded-full glass-panel-secondary flex items-center justify-center border border-[var(--border-subtle)]">
           <FileCheck size={18} className="text-[var(--text-primary)]" />
         </div>
         <div>
@@ -24,7 +24,7 @@ export function TrustBoosters() {
       </div>
 
       <div className="flex flex-col items-center text-center space-y-3 p-6 glass-card rounded-[18px]">
-        <div className="h-10 w-10 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center border border-[var(--border-subtle)]">
+        <div className="h-10 w-10 rounded-full glass-panel-secondary flex items-center justify-center border border-[var(--border-subtle)]">
           <Users size={18} className="text-[var(--text-primary)]" />
         </div>
         <div>
@@ -34,7 +34,7 @@ export function TrustBoosters() {
       </div>
 
       <div className="flex flex-col items-center text-center space-y-3 p-6 glass-card rounded-[18px]">
-        <div className="h-10 w-10 rounded-full bg-[var(--bg-secondary)] flex items-center justify-center border border-[var(--border-subtle)]">
+        <div className="h-10 w-10 rounded-full glass-panel-secondary flex items-center justify-center border border-[var(--border-subtle)]">
           <ShieldCheck size={18} className="text-[var(--accent-blue)]" />
         </div>
         <div>

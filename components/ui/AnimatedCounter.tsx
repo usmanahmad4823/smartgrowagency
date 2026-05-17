@@ -19,7 +19,7 @@ export function AnimatedCounter({
   durationMs?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-20%" });
+  const isInView = useInView(ref, { once: true, margin: "-5%" });
   const [value, setValue] = useState(0);
 
   useEffect(() => {

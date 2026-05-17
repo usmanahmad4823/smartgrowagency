@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="bg-[var(--bg-primary)]">
+    <div className="glass-panel">
       <section className="section-y border-b border-[var(--border-subtle)]">
         <div className="container-content max-w-4xl space-y-6">
           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--text-tertiary)]">SERVICES</p>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section-y bg-[var(--bg-secondary)]">
+      <section className="section-y glass-panel-secondary">
         <div className="container-content space-y-10">
           <SectionHeader
             eyebrow="INVESTMENT"

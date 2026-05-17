@@ -29,6 +29,11 @@
   --hero-blob-strong: rgba(0, 113, 227, 0.07);
   --hero-radial: radial-gradient(circle at 50% 20%, rgba(0, 113, 227, 0.08), transparent 55%);
   --nav-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --glass-panel-bg: rgba(255, 255, 255, 0.6);
+  --glass-panel-bg-secondary: rgba(250, 250, 250, 0.65);
+  --glass-panel-bg-tertiary: rgba(245, 245, 245, 0.7);
+  --glass-3d-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), inset 0 -1px 1px rgba(0, 0, 0, 0.05), 0 8px 32px rgba(0, 0, 0, 0.1);
+  --glass-3d-shadow-hover: inset 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 -1px 1px rgba(0, 0, 0, 0.05), 0 12px 48px rgba(0, 0, 0, 0.15);
 }
 
 .dark {
@@ -50,6 +55,11 @@
   --hero-blob-strong: rgba(255, 255, 255, 0.03);
   --hero-radial: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.06), transparent 55%);
   --nav-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+  --glass-panel-bg: rgba(0, 0, 0, 0.3);
+  --glass-panel-bg-secondary: rgba(29, 29, 31, 0.35);
+  --glass-panel-bg-tertiary: rgba(44, 44, 46, 0.4);
+  --glass-3d-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), inset 0 -1px 1px rgba(0, 0, 0, 0.3), 0 8px 32px rgba(0, 0, 0, 0.4);
+  --glass-3d-shadow-hover: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.4), 0 12px 48px rgba(0, 0, 0, 0.6);
 }
 
 @theme inline {
@@ -93,6 +103,45 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-card);
+  box-shadow: var(--glass-3d-shadow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glass-3d-shadow-hover);
+}
+
+.glass-panel {
+  background: var(--glass-panel-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-color: var(--border-subtle);
+  box-shadow: var(--glass-3d-shadow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.glass-panel-secondary {
+  background: var(--glass-panel-bg-secondary);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-color: var(--border-subtle);
+  box-shadow: var(--glass-3d-shadow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.glass-panel-tertiary {
+  background: var(--glass-panel-bg-tertiary);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-color: var(--border-subtle);
+  box-shadow: var(--glass-3d-shadow);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.glass-3d-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glass-3d-shadow-hover);
 }
 
 .container-content {

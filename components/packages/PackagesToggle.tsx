@@ -11,7 +11,7 @@ export function PackagesToggle() {
 
   return (
     <div className="flex flex-col items-center w-full">
-      <div className="relative mb-12 inline-flex items-center rounded-full border border-[var(--border-subtle)] bg-[var(--bg-secondary)] p-1">
+      <div className="relative mb-12 inline-flex items-center rounded-full border border-[var(--border-subtle)] glass-panel-secondary p-1">
         <div
           className="absolute inset-y-1 rounded-full bg-[var(--text-primary)] transition-all duration-300 ease-out"
           style={{

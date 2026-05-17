@@ -16,7 +16,7 @@ const bullets = [
 
 export function WhyChooseUs() {
   return (
-    <section className="section-y bg-[var(--bg-secondary)]">
+    <section className="section-y glass-panel-secondary">
       <div className="container-content grid gap-12 lg:grid-cols-12 lg:items-start">
         <div className="lg:col-span-5">
           <SectionHeader

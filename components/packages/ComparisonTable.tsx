@@ -23,7 +23,7 @@ const features = [
 export function ComparisonTable() {
   return (
     <div className="w-full overflow-x-auto pb-6">
-      <div className="min-w-[700px] border border-[var(--border-subtle)] rounded-[18px] bg-[var(--bg-secondary)] overflow-hidden">
+      <div className="min-w-[700px] border border-[var(--border-subtle)] rounded-[18px] glass-panel-secondary overflow-hidden">
         <div className="grid grid-cols-4 border-b border-[var(--border-subtle)] bg-[var(--glass-bg)] px-6 py-4 sticky top-0">
           <div className="font-display text-[14px] font-semibold text-[var(--text-primary)]">Features</div>
           <div className="font-display text-[14px] font-semibold text-[var(--text-primary)] text-center">Starter</div>
@@ -32,7 +32,7 @@ export function ComparisonTable() {
         </div>
         <div className="divide-y divide-[var(--border-subtle)]">
           {features.map((feature, i) => (
-            <div key={i} className="grid grid-cols-4 px-6 py-4 hover:bg-[var(--bg-primary)] transition-colors">
+            <div key={i} className="grid grid-cols-4 px-6 py-4 hover:glass-panel transition-colors">
               <div className="text-[13px] text-[var(--text-secondary)] font-medium flex items-center">
                 {feature.label}
               </div>
