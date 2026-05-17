@@ -18,10 +18,10 @@ export function PortfolioFilters({
           <Link
             key={category}
             href={href}
-            className={`rounded-full border px-4 py-2 text-[14px] font-semibold transition-colors ${
+            className={`rounded-full border px-4 py-2 text-[14px] font-bold transition-all duration-300 ${
               isActive
-                ? "border-[var(--accent-blue)] bg-[rgba(41,151,255,0.12)] text-[var(--text-primary)]"
-                : "border-[var(--border-subtle)] text-[var(--text-secondary)] hover:border-[var(--accent-blue)] hover:text-[var(--text-primary)]"
+                ? "border-[#2997ff]/40 bg-gradient-to-r from-[#2997ff]/10 to-[#30d158]/10 text-[#2997ff] shadow-sm scale-[1.03]"
+                : "border-white/10 text-[var(--text-secondary)] hover:border-white/20 hover:bg-white/[0.04] hover:text-white hover:scale-[1.01]"
             }`}
           >
             {category}

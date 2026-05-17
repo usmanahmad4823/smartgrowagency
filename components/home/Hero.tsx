@@ -19,6 +19,12 @@ const heroItem = {
 };
 
 export function Hero() {
+  const cardThemes = {
+    blue: "#2997ff",
+    emerald: "#30d158",
+    orange: "#ff9f0a"
+  };
+
   return (
     <section className="relative min-h-[100svh] overflow-hidden glass-panel pt-8">
       <div className="pointer-events-none absolute inset-0" aria-hidden>
@@ -41,7 +47,7 @@ export function Hero() {
         <motion.div variants={heroStagger} initial="hidden" animate="visible" className="max-w-3xl space-y-6 md:space-y-7">
           <motion.div variants={heroItem} className="flex items-center gap-3">
             <Badge>DIGITAL GROWTH PARTNER</Badge>
-            <div className="hidden items-center gap-1.5 text-[11px] font-medium text-[var(--text-tertiary)] sm:flex">
+            <div className="hidden items-center gap-1.5 text-[11px] font-bold text-[var(--text-tertiary)] sm:flex">
               <span className="flex h-2 w-2 animate-pulse rounded-full bg-[#30d158] ring-2 ring-[#30d158]/20" />
               Accepting new projects
             </div>
@@ -49,17 +55,17 @@ export function Hero() {
 
           <motion.h1
             variants={heroItem}
-            className="font-display text-[36px] font-bold leading-[1.05] tracking-[-0.03em] text-[var(--text-primary)] md:text-[52px] lg:text-[64px]"
+            className="font-display text-[36px] font-bold leading-[1.05] tracking-tight text-[var(--text-primary)] md:text-[52px] lg:text-[64px]"
           >
             Scale Your Brand With <br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-[var(--accent-blue)] via-indigo-500 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#2997ff] via-[#30d158] to-[#bf5af2] bg-clip-text text-transparent">
               Elite Digital Execution.
             </span>
           </motion.h1>
 
           <motion.p
             variants={heroItem}
-            className="max-w-xl text-[15px] leading-[1.6] text-[var(--text-secondary)] md:max-w-2xl md:text-[17px]"
+            className="max-w-xl text-[15px] leading-[1.6] text-[var(--text-secondary)] font-medium md:max-w-2xl md:text-[17px]"
           >
             We pair premium web craft, AI automation and performance media to convert attention into predictable revenue. Stop managing five different agencies.
           </motion.p>
@@ -68,12 +74,12 @@ export function Hero() {
             <Button
               href="/contact"
               variant="primary"
-              className="h-12 px-8 text-[13px] shadow-lg shadow-[var(--accent-blue)]/20 transition-all hover:-translate-y-0.5 hover:shadow-[var(--accent-blue)]/40"
+              className="h-12 px-8 text-[12px] font-bold tracking-wider"
             >
               Get Your Free Growth Plan
               <ArrowRight size={16} className="ml-1" />
             </Button>
-            <Button href="/portfolio" variant="ghost" className="h-12 px-8 text-[13px] hover:glass-panel-secondary">
+            <Button href="/portfolio" variant="ghost" className="h-12 px-8 text-[12px] font-bold tracking-wider hover:glass-panel-secondary">
               View Case Studies
             </Button>
           </motion.div>
@@ -97,7 +103,7 @@ export function Hero() {
                   </svg>
                 ))}
               </div>
-              <p className="text-[11px] font-medium text-[var(--text-tertiary)]">
+              <p className="text-[11px] font-bold text-[var(--text-tertiary)]">
                 Trusted by 50+ modern brands
               </p>
             </div>
@@ -108,23 +114,55 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
-          className="mt-12 grid gap-3 sm:grid-cols-3 sm:gap-4"
+          className="mt-12 grid gap-4 sm:grid-cols-3"
         >
-          <div className="glass-card flex flex-col gap-1.5 p-4 md:p-5">
-            <AnimatedCounter to={31} suffix="+" />
-            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">
+          {/* Hero Stat 1 */}
+          <div 
+            className="glass-card glass-3d-hover relative overflow-hidden flex flex-col gap-1.5 p-5 transition-all duration-300 border"
+            style={{
+              backgroundColor: `${cardThemes.blue}06`,
+              borderColor: `${cardThemes.blue}25`
+            }}
+          >
+            <div className="pointer-events-none absolute -right-8 -top-8 h-16 w-16 rounded-full opacity-35 blur-[18px]" style={{ backgroundColor: cardThemes.blue }} />
+            <div style={{ color: cardThemes.blue }} className="relative z-10">
+              <AnimatedCounter to={31} suffix="+" />
+            </div>
+            <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
               Projects shipped with measurable lift
             </p>
           </div>
-          <div className="glass-card flex flex-col gap-1.5 p-4 md:p-5">
-            <AnimatedCounter to={100} suffix="%" />
-            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">
+
+          {/* Hero Stat 2 */}
+          <div 
+            className="glass-card glass-3d-hover relative overflow-hidden flex flex-col gap-1.5 p-5 transition-all duration-300 border"
+            style={{
+              backgroundColor: `${cardThemes.emerald}06`,
+              borderColor: `${cardThemes.emerald}25`
+            }}
+          >
+            <div className="pointer-events-none absolute -right-8 -top-8 h-16 w-16 rounded-full opacity-35 blur-[18px]" style={{ backgroundColor: cardThemes.emerald }} />
+            <div style={{ color: cardThemes.emerald }} className="relative z-10">
+              <AnimatedCounter to={100} suffix="%" />
+            </div>
+            <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
               Clients who renew after the first win
             </p>
           </div>
-          <div className="glass-card flex flex-col gap-1.5 p-4 md:p-5">
-            <AnimatedCounter to={10} suffix="+" />
-            <p className="text-[11px] leading-snug text-[var(--text-secondary)] md:text-[12px]">
+
+          {/* Hero Stat 3 */}
+          <div 
+            className="glass-card glass-3d-hover relative overflow-hidden flex flex-col gap-1.5 p-5 transition-all duration-300 border"
+            style={{
+              backgroundColor: `${cardThemes.orange}06`,
+              borderColor: `${cardThemes.orange}25`
+            }}
+          >
+            <div className="pointer-events-none absolute -right-8 -top-8 h-16 w-16 rounded-full opacity-35 blur-[18px]" style={{ backgroundColor: cardThemes.orange }} />
+            <div style={{ color: cardThemes.orange }} className="relative z-10">
+              <AnimatedCounter to={10} suffix="+" />
+            </div>
+            <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
               Brands partnered across industries
             </p>
           </div>
@@ -134,7 +172,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="mt-8 text-[11px] text-[var(--text-tertiary)]"
+          className="mt-8 text-[11px] font-semibold text-[var(--text-tertiary)]"
         >
           Prefer WhatsApp?{" "}
           <Link className="text-[var(--accent-blue)] hover:text-[var(--accent-blue-hover)]" href="/contact">

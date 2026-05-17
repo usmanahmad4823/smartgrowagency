@@ -6,8 +6,17 @@ import { motion } from "framer-motion";
 import type { Project } from "@prisma/client";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { fadeUpVariant } from "@/lib/motion";
+import { Button } from "@/components/ui/Button";
 
 export function PortfolioPreview({ projects }: { projects: Project[] }) {
+  const cardColors = [
+    "#2997ff", // Blue
+    "#30d158", // Emerald
+    "#ff9f0a", // Orange
+    "#bf5af2", // Purple
+    "#ff375f"  // Pink
+  ];
+
   return (
     <section className="section-y glass-panel-secondary">
       <div className="container-content">
@@ -27,31 +36,44 @@ export function PortfolioPreview({ projects }: { projects: Project[] }) {
           }}
           className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
         >
-          {projects.map((project) => (
-            <motion.article
-              key={project.id}
-              variants={fadeUpVariant}
-              className="group relative overflow-hidden rounded-[18px] border border-[var(--border-subtle)] glass-panel-tertiary"
-            >
-              <Link href={`/portfolio/${project.slug}`} className="block">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    priority={false}
-                  />
-                  <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/55" />
-                  <div className="absolute inset-x-0 bottom-0 translate-y-2 p-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                    <p className="text-[10px] uppercase tracking-[0.14em] text-[var(--text-tertiary)]">{project.category}</p>
-                    <p className="font-display text-[17px] font-semibold text-white">{project.title}</p>
+          {projects.map((project, idx) => {
+            const color = cardColors[idx % cardColors.length];
+
+            return (
+              <motion.article
+                key={project.id}
+                variants={fadeUpVariant}
+                className="group relative overflow-hidden rounded-[18px] border glass-3d-hover transition-all duration-300"
+                style={{
+                  backgroundColor: `${color}05`,
+                  borderColor: `${color}25`
+                }}
+              >
+                {/* Background Soft Glow Orb */}
+                <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full opacity-20 blur-[20px]" style={{ backgroundColor: color }} />
+
+                <Link href={`/portfolio/${project.slug}`} className="block">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      priority={false}
+                    />
+                    <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/60" />
+                    <div className="absolute inset-x-0 bottom-0 translate-y-2 p-5 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em]" style={{ color: color }}>
+                        {project.category}
+                      </p>
+                      <p className="font-display text-[17px] font-bold text-white mt-0.5">{project.title}</p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </motion.article>
-          ))}
+                </Link>
+              </motion.article>
+            );
+          })}
         </motion.div>
 
         <motion.div
@@ -61,12 +83,9 @@ export function PortfolioPreview({ projects }: { projects: Project[] }) {
           transition={{ duration: 0.55 }}
           className="mt-12 flex justify-center"
         >
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center justify-center rounded-full bg-[var(--accent-blue)] px-7 py-3 text-[12px] font-semibold text-white transition-colors hover:bg-[var(--accent-blue-hover)]"
-          >
+          <Button href="/portfolio" variant="primary" className="px-8 py-3 text-[12px] font-bold">
             View All Work →
-          </Link>
+          </Button>
         </motion.div>
       </div>
     </section>

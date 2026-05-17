@@ -16,7 +16,7 @@ const projects = [
       "Demo requests rose 182% in 8 weeks while CAC fell 34%. Sales adopted the new narrative within one enablement session.",
     techStack: JSON.stringify(["Next.js", "Tailwind CSS", "Segment", "HubSpot"]),
     testimonial:
-      "Creecode gave us a site that finally matches the product. Pipeline quality is night-and-day better.",
+      "Smart Grow Agency gave us a site that finally matches the product. Pipeline quality is night-and-day better.",
     metrics: JSON.stringify([
       { label: "Demo lift", value: "+182%" },
       { label: "CAC", value: "-34%" },
@@ -136,7 +136,7 @@ const projects = [
     results:
       "Field completion rates improved 27% while support tickets related to sync fell by half.",
     techStack: JSON.stringify(["React Native", "GraphQL", "SAP BTP", "Auth0"]),
-    testimonial: "Creecode shipped mobile like a product team, not a vendor.",
+    testimonial: "Smart Grow Agency shipped mobile like a product team, not a vendor.",
     metrics: JSON.stringify([
       { label: "Field completion", value: "+27%" },
       { label: "Sync tickets", value: "-50%" },
@@ -205,7 +205,7 @@ Ship weekly, review briefly, and promote winners into always-on programs.
 
 ## Soft CTA
 
-If you want Creecode to pressure-test your roadmap, [request a free proposal](/contact)—we will reply within 24 hours.`,
+If you want Smart Grow Agency to pressure-test your roadmap, [request a free proposal](/contact)—we will reply within 24 hours.`,
   },
   {
     slug: "ai-automation-readiness",

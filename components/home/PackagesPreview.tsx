@@ -23,7 +23,7 @@ export function PackagesPreview() {
         </div>
 
         <div className="flex justify-center pt-4">
-          <Button href="/packages" variant="ghost" className="border border-[var(--border-subtle)] px-6 py-2">
+          <Button href="/packages" variant="primary" className="px-8 py-3 text-[12px] font-bold">
             View full packages, one-time projects & add-ons →
           </Button>
         </div>

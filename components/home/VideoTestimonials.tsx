@@ -26,6 +26,12 @@ const videos = [
 ];
 
 export function VideoTestimonials() {
+  const cardColors = [
+    "#2997ff", // Blue
+    "#30d158", // Emerald
+    "#ff9f0a"  // Orange
+  ];
+
   return (
     <section className="section-y glass-panel-secondary">
       <div className="container-content">
@@ -45,33 +51,56 @@ export function VideoTestimonials() {
           }}
           className="grid grid-cols-1 gap-6 md:grid-cols-3"
         >
-          {videos.map((video) => (
-            <motion.article key={video.title} variants={fadeUpVariant} className="glass-card overflow-hidden p-0">
-              <Link href={video.href} target="_blank" rel="noreferrer" className="group block">
-                <div className="relative aspect-video w-full overflow-hidden">
-                  <Image src={video.thumb} alt={video.title} fill className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" sizes="(max-width:768px) 100vw, 33vw" />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/35 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-black">
-                      <Play size={22} className="ml-1" aria-hidden />
+          {videos.map((video, idx) => {
+            const color = cardColors[idx % cardColors.length];
+
+            return (
+              <motion.article 
+                key={video.title} 
+                variants={fadeUpVariant} 
+                className="glass-card glass-3d-hover relative overflow-hidden p-0 transition-all duration-300 border"
+                style={{
+                  backgroundColor: `${color}05`,
+                  borderColor: `${color}25`
+                }}
+              >
+                {/* Background Soft Glow Orb */}
+                <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full opacity-20 blur-[20px]" style={{ backgroundColor: color }} />
+
+                <Link href={video.href} target="_blank" rel="noreferrer" className="group block relative z-10">
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image src={video.thumb} alt={video.title} fill className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" sizes="(max-width:768px) 100vw, 33vw" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <div 
+                        className="flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg transition-transform duration-300 group-hover:scale-105"
+                        style={{ 
+                          backgroundColor: color,
+                          boxShadow: `inset 0 1px 1px rgba(255,255,255,0.4), 0 6px 15px ${color}50`
+                        }}
+                      >
+                        <Play size={22} fill="white" className="ml-1" aria-hidden />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="p-5">
-                  <p className="font-display text-[14px] font-semibold leading-snug text-[var(--text-primary)]">
-                    {video.title}
-                  </p>
-                  <p className="mt-2 text-[11px] text-[var(--text-tertiary)]">Watch on YouTube →</p>
-                </div>
-              </Link>
-            </motion.article>
-          ))}
+                  <div className="p-5">
+                    <p className="font-display text-[14px] font-bold leading-snug text-[var(--text-primary)]">
+                      {video.title}
+                    </p>
+                    <p className="mt-2.5 text-[11px] font-bold uppercase tracking-wider" style={{ color: color }}>
+                      Watch on YouTube →
+                    </p>
+                  </div>
+                </Link>
+              </motion.article>
+            );
+          })}
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-10 text-center text-[12px] text-[var(--text-tertiary)]"
+          className="mt-10 text-center text-[12px] font-semibold text-[var(--text-tertiary)]"
         >
           Prefer a private walkthrough?{" "}
           <Link className="text-[var(--accent-blue)] hover:text-[var(--accent-blue-hover)]" href="/contact">

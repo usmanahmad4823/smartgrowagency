@@ -14,6 +14,15 @@ const bullets = [
   { title: "AI-Powered Workflows", copy: "Automation where it saves time; human judgment where it protects brand." },
 ];
 
+const bulletColors = [
+  { accent: "#2997ff" }, // ROI-Driven -> Blue
+  { accent: "#30d158" }, // Transparent Reporting -> Emerald
+  { accent: "#ff9f0a" }, // Dedicated Account Manager -> Orange
+  { accent: "#bf5af2" }, // Fast Turnaround -> Purple
+  { accent: "#ff375f" }, // Proven Results -> Pink
+  { accent: "#64d2ff" }  // AI-Powered Workflows -> Cyan
+];
+
 export function WhyChooseUs() {
   return (
     <section className="section-y glass-panel-secondary">
@@ -33,23 +42,45 @@ export function WhyChooseUs() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="grid gap-4 lg:col-span-7"
+          className="grid gap-4 lg:col-span-7 animate-stagger"
         >
-          {bullets.map((item) => (
-            <motion.li
-              key={item.title}
-              variants={fadeUpVariant}
-              className="glass-card flex gap-3 p-5"
-            >
-              <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(41,151,255,0.12)] text-[var(--accent-blue)]">
-                <Check size={18} aria-hidden />
-              </div>
-              <div>
-                <p className="font-display text-[15px] font-semibold text-[var(--text-primary)]">{item.title}</p>
-                <p className="mt-1 text-[12px] leading-relaxed text-[var(--text-secondary)]">{item.copy}</p>
-              </div>
-            </motion.li>
-          ))}
+          {bullets.map((item, idx) => {
+            const color = bulletColors[idx % bulletColors.length].accent;
+
+            return (
+              <motion.li
+                key={item.title}
+                variants={fadeUpVariant}
+                className="glass-card glass-3d-hover relative overflow-hidden flex gap-4 p-5 transition-all duration-300 border"
+                style={{
+                  backgroundColor: `${color}06`,
+                  borderColor: `${color}25`,
+                }}
+              >
+                {/* Subtle dynamic glowing orb inside */}
+                <div 
+                  className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full opacity-30 blur-[20px]"
+                  style={{ backgroundColor: color }}
+                />
+
+                {/* Solid Vibrant Circle Icon Box */}
+                <div 
+                  className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white shadow-md transition-transform duration-300"
+                  style={{ 
+                    backgroundColor: color,
+                    boxShadow: `inset 0 1px 2px rgba(255,255,255,0.4), 0 4px 10px ${color}40`
+                  }}
+                >
+                  <Check size={16} strokeWidth={3} aria-hidden />
+                </div>
+
+                <div className="relative z-10">
+                  <p className="font-display text-[15px] font-bold text-[var(--text-primary)]">{item.title}</p>
+                  <p className="mt-1 text-[12px] leading-relaxed text-[var(--text-secondary)] font-medium">{item.copy}</p>
+                </div>
+              </motion.li>
+            );
+          })}
         </motion.ul>
       </div>
       <motion.p
