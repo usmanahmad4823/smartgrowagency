@@ -13,14 +13,19 @@ const services = [
   "Search Engine Optimization",
   "Graphic Design",
   "Video Editing & Content Creation",
-  "Paid Advertising",
-  "Branding & Brand Identity",
   "App Development",
-  "Email Marketing",
   "Other / Not sure yet",
 ];
 
-const budgets = ["Under PKR 100k", "PKR 100k – 300k", "PKR 300k – 500k", "PKR 500k – 1M", "PKR 1M – 3M", "PKR 3M+", "Prefer to discuss"];
+const budgets = [
+  "Under $1,000",
+  "$1,000 – $2,500",
+  "$2,500 – $5,000",
+  "$5,000 – $10,000",
+  "$10,000 – $25,000",
+  "$25,000+",
+  "Prefer to discuss",
+];
 
 const referrals = [
   "Google Search",

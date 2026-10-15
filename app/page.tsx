@@ -7,7 +7,6 @@ import { PortfolioPreview } from "@/components/home/Portfolio";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Stats } from "@/components/home/Stats";
 import { PackagesPreview } from "@/components/home/PackagesPreview";
-import { BlogPreview } from "@/components/home/BlogPreview";
 import { CTABanner } from "@/components/home/CTABanner";
 import { VideoTestimonials } from "@/components/home/VideoTestimonials";
 import { getFeaturedProjects } from "@/lib/queries";
@@ -34,7 +33,6 @@ export default async function Home() {
       <Stats />
       <VideoTestimonials />
       <PackagesPreview />
-      <BlogPreview />
       <CTABanner />
     </>
   );

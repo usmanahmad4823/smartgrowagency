@@ -1,10 +1,10 @@
-import { Landmark, Wallet, CircleDollarSign } from "lucide-react";
+import { CreditCard, Landmark, CircleDollarSign, Globe } from "lucide-react";
 
 export function PaymentMethods() {
   const methods = [
-    { name: "EasyPaisa", icon: Wallet, color: "#00A950" },
-    { name: "JazzCash", icon: Wallet, color: "#EF4136" },
-    { name: "Bank Transfer", icon: Landmark, color: "#2997ff" },
+    { name: "Credit Card / Stripe", icon: CreditCard, color: "#635BFF" },
+    { name: "PayPal (Global)", icon: Globe, color: "#0070BA" },
+    { name: "Wire / SWIFT / ACH", icon: Landmark, color: "#2997ff" },
     { name: "USDT / Crypto", icon: CircleDollarSign, color: "#26A17B" }
   ];
 
@@ -16,7 +16,7 @@ export function PaymentMethods() {
 
       <div className="max-w-2xl relative z-10">
         <h3 className="font-display text-[24px] font-bold tracking-tight md:text-[28px] text-[var(--text-primary)]">
-          Flexible payments. Zero hassle.
+          International payments. Zero friction.
         </h3>
         
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -46,10 +46,10 @@ export function PaymentMethods() {
 
         <div className="mt-8 space-y-2.5">
           <p className="text-[14px] font-bold text-[var(--text-secondary)]">
-            50% advance to start. 50% on delivery. No hidden charges.
+            50% upfront to initiate sprint. 50% upon final delivery & sign-off. No surprise fees.
           </p>
           <p className="text-[12px] font-semibold text-[var(--text-tertiary)]">
-            International clients can pay in USD/GBP via PayPal or USDT.
+            International clients billed in USD ($). Secure checkout with instant invoices, receipts, and global tax compliance.
           </p>
         </div>
       </div>

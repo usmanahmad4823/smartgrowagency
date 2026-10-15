@@ -12,7 +12,7 @@ export function PackagesPreview() {
         <SectionHeader
           eyebrow="PRICING"
           title="Honest pricing. Extraordinary results."
-          description="Packages designed for Pakistani businesses — from startups to corporates."
+          description="Transparent packages tailored for high-growth businesses and international clients — from startups to global enterprises."
           align="center"
         />
 

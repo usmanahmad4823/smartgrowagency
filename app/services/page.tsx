@@ -9,7 +9,7 @@ import { pricingTiers, services } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Services built to lift pipeline, retention, and brand equity",
   description:
-    "Explore Smart Grow Agency services spanning web, AI automation, paid media, SEO, creative, and lifecycle marketing—delivered as one accountable team.",
+    "Explore Smart Grow Agency services spanning web development, AI automation, social media, SEO, graphic design, video editing, and app engineering—delivered as one accountable team.",
 };
 
 export default function ServicesPage() {

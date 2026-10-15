@@ -55,10 +55,10 @@ export function Stats() {
           >
             <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full opacity-35 blur-[22px]" style={{ backgroundColor: themes.revenue }} />
             <div style={{ color: themes.revenue }} className="relative z-10">
-              <AnimatedCounter to={9} prefix="PKR " suffix="M+" />
+              <AnimatedCounter to={4} prefix="$" suffix="M+" />
             </div>
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
-              Direct revenue generated for our early clients
+              Direct revenue generated for our global clients
             </p>
           </div>
 

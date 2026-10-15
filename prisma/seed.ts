@@ -94,11 +94,11 @@ const projects = [
     solution:
       "We audited deliverability, rewrote high-intent flows, and introduced experimentation on subject lines, offers, and cadence.",
     results:
-      "Lifecycle-attributed revenue rose PKR 60M in the first quarter post-launch with higher engagement across every stage.",
+      "Lifecycle-attributed revenue rose $650K+ in the first quarter post-launch with higher engagement across every stage.",
     techStack: JSON.stringify(["Customer.io", "Snowflake", "dbt", "Iterable"]),
     testimonial: "They speak lifecycle in revenue, not opens and clicks.",
     metrics: JSON.stringify([
-      { label: "Lifecycle revenue", value: "+PKR 60M" },
+      { label: "Lifecycle revenue", value: "+$650K" },
       { label: "Win-back rate", value: "+3.4 pts" },
       { label: "Spam complaints", value: "-62%" },
     ]),

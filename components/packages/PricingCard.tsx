@@ -3,7 +3,7 @@
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { MonthlyPackage, formatPKR } from "@/lib/pricing";
+import { MonthlyPackage, formatUSD } from "@/lib/pricing";
 
 export function PricingCard({ pkg }: { pkg: MonthlyPackage }) {
   const isPopular = pkg.isPopular;
@@ -47,7 +47,7 @@ export function PricingCard({ pkg }: { pkg: MonthlyPackage }) {
           {pkg.price > 0 ? (
             <>
               <span className="font-display text-[32px] font-bold tracking-tight" style={{ color: accent }}>
-                {formatPKR(pkg.price)}
+                {formatUSD(pkg.price)}
               </span>
               <span className="text-[13px] text-[var(--text-tertiary)] font-medium">{pkg.period}</span>
             </>

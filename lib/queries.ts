@@ -30,23 +30,3 @@ export async function getProjectBySlug(slug: string) {
     return null;
   }
 }
-
-export async function getBlogPosts(limit?: number, category?: string | null) {
-  try {
-    return await prisma.blogPost.findMany({
-      where: category ? { category } : undefined,
-      orderBy: { publishedAt: "desc" },
-      take: limit,
-    });
-  } catch {
-    return [];
-  }
-}
-
-export async function getBlogPostBySlug(slug: string) {
-  try {
-    return await prisma.blogPost.findUnique({ where: { slug } });
-  } catch {
-    return null;
-  }
-}

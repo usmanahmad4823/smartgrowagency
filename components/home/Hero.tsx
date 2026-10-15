@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -87,10 +88,12 @@ export function Hero() {
           <motion.div variants={heroItem} className="flex items-center gap-4 pt-2">
             <div className="flex -space-x-2">
               {[10, 32, 45, 68].map((imgId, i) => (
-                <img
+                <Image
                   key={i}
                   src={`https://i.pravatar.cc/100?img=${imgId}`}
-                  alt="Avatar"
+                  alt="Client avatar"
+                  width={32}
+                  height={32}
                   className="h-8 w-8 rounded-full border-2 border-[var(--bg-primary)] object-cover"
                 />
               ))}

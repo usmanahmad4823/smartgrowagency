@@ -1,4 +1,4 @@
-import { addOns, formatPKR } from "@/lib/pricing";
+import { addOns, formatUSD } from "@/lib/pricing";
 
 export function AddOns() {
   const addonColors = [
@@ -29,7 +29,7 @@ export function AddOns() {
 
             <p className="font-display text-[14px] font-bold text-[var(--text-primary)] relative z-10">{addon.name}</p>
             <div className="text-right relative z-10">
-              <span className="font-display text-[15px] font-bold" style={{ color: color }}>{formatPKR(addon.price)}</span>
+              <span className="font-display text-[15px] font-bold" style={{ color: color }}>{formatUSD(addon.price)}</span>
               {addon.isMonthly && <span className="text-[11px] text-[var(--text-tertiary)] block font-semibold -mt-0.5">/mo</span>}
             </div>
           </div>

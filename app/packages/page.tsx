@@ -8,17 +8,16 @@ import { TrustBoosters } from "@/components/packages/TrustBoosters";
 import { AddOns } from "@/components/packages/AddOns";
 import { PaymentMethods } from "@/components/packages/PaymentMethods";
 import { FAQSection } from "@/components/packages/FAQSection";
+import { getWhatsAppLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Packages & Pricing — Honest pricing. Real results.",
+  title: "Packages & Pricing — Transparent International Rates",
   description:
-    "Transparent pricing packages designed for Pakistani businesses. From startups to corporates, find the perfect plan to scale your digital presence.",
+    "Transparent pricing packages in USD designed for ambitious modern businesses and international clients. From custom web builds to monthly growth retainers.",
 };
 
 export default function PackagesPage() {
-  // Replace with the actual WhatsApp number
-  const whatsappNumber = "923000000000";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi,%20I%20want%20to%20know%20more%20about%20your%20packages`;
+  const whatsappUrl = getWhatsAppLink("Hi Smart Grow Agency — I want to know more about your international packages.");
 
   return (
     <div className="glass-panel">

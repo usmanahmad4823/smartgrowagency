@@ -1,10 +1,7 @@
 import {
   Bot,
-  Brush,
   Camera,
   Globe,
-  LineChart,
-  Mail,
   Megaphone,
   Palette,
   Search,
@@ -115,36 +112,6 @@ export const services: ServiceItem[] = [
     useCases: ["YouTube series", "Paid social", "Webinar replays"],
   },
   {
-    slug: "paid-advertising",
-    title: "Paid Advertising",
-    short: "Google and Meta campaigns optimized for pipeline, not clicks.",
-    description:
-      "Clean tracking, structured tests, and creative iteration cycles that protect margin while scaling what already works.",
-    icon: LineChart,
-    accent: "#0a84ff",
-    features: [
-      "Full-funnel measurement plans",
-      "Creative testing frameworks",
-      "Budget pacing with guardrails",
-    ],
-    useCases: ["Lead generation", "Ecommerce scale", "App installs"],
-  },
-  {
-    slug: "branding",
-    title: "Branding & Brand Identity",
-    short: "Positioning and visuals that make premium pricing feel obvious.",
-    description:
-      "You walk away with a crisp story, a flexible identity system, and guidelines your partners can execute without diluting the brand.",
-    icon: Brush,
-    accent: "#ff453a",
-    features: [
-      "Positioning workshops",
-      "Logo, color, and type systems",
-      "Brand guidelines + rollout kits",
-    ],
-    useCases: ["Rebrands", "Spinouts", "Category upgrades"],
-  },
-  {
     slug: "app-development",
     title: "App Development (Mobile & Web)",
     short: "Ship reliable products customers return to every week.",
@@ -159,40 +126,25 @@ export const services: ServiceItem[] = [
     ],
     useCases: ["Customer portals", "Internal tools", "MVP launches"],
   },
-  {
-    slug: "email-marketing",
-    title: "Email Marketing",
-    short: "Lifecycle email that lifts retention and repeat revenue.",
-    description:
-      "Audits, segmentation, copy, and automation flows that respect your brand voice while driving measurable lift in engagement and sales.",
-    icon: Mail,
-    accent: "#2997ff",
-    features: [
-      "Deliverability and list hygiene reviews",
-      "Automations for onboarding and win-back",
-      "Testing cadence for subject lines and offers",
-    ],
-    useCases: ["SaaS onboarding", "Ecommerce retention", "Newsletters"],
-  },
 ];
 
 export const pricingTiers = [
   {
     name: "Starter",
-    price: "From PKR 500k",
-    blurb: "Best for a focused launch or a single funnel upgrade.",
-    items: ["Discovery workshop", "Core deliverables", "30-day optimization window"],
+    price: "From $1,500",
+    blurb: "Best for a focused launch, high-converting site, or single funnel upgrade.",
+    items: ["Discovery & architecture", "Core digital deliverables", "30-day optimization window"],
   },
   {
     name: "Growth",
-    price: "From PKR 1.5M",
-    blurb: "Best when you need velocity across creative, web, and media.",
-    items: ["Cross-channel roadmap", "Dedicated lead", "Biweekly strategy reviews"],
+    price: "From $3,500/mo",
+    blurb: "Best when you need sustained velocity across creative, web, and paid media.",
+    items: ["Cross-channel roadmap", "Dedicated engineering & design pod", "Biweekly strategy & sprint reviews"],
   },
   {
     name: "Enterprise",
     price: "Custom",
-    blurb: "Best for multi-brand teams, compliance, and complex integrations.",
-    items: ["Executive reporting", "SLA-backed response", "Embedded workflows"],
+    blurb: "Best for global brands, multi-region compliance, and complex custom integrations.",
+    items: ["Executive KPI reporting", "24/7 SLA-backed response", "Embedded product team workflows"],
   },
 ] as const;

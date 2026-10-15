@@ -3,7 +3,7 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { OneTimePackage, formatPKR } from "@/lib/pricing";
+import { OneTimePackage, formatUSD } from "@/lib/pricing";
 
 export function OneTimeCard({ pkg }: { pkg: OneTimePackage }) {
   // Assign gorgeous neon brand color mapping
@@ -29,7 +29,7 @@ export function OneTimeCard({ pkg }: { pkg: OneTimePackage }) {
         <h3 className="font-display text-[14px] font-bold uppercase tracking-wider text-[var(--text-tertiary)]">{pkg.name}</h3>
         <div className="mt-4 flex items-baseline gap-1">
           <span className="font-display text-[32px] font-bold tracking-tight" style={{ color: accent }}>
-            {formatPKR(pkg.price)}
+            {formatUSD(pkg.price)}
           </span>
         </div>
       </div>

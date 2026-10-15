@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin, Instagram, Twitter, Youtube, ShieldCheck, Sparkles } from "lucide-react";
+import { Linkedin, Instagram, Twitter, ShieldCheck, Sparkles } from "lucide-react";
 import { navLinks } from "@/lib/nav-links";
 import { siteConfig } from "@/lib/site";
 import { services } from "@/lib/services";
@@ -7,7 +7,6 @@ import { services } from "@/lib/services";
 const company = [
   { href: "/about", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 

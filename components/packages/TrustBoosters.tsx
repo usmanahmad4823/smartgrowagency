@@ -3,26 +3,26 @@ import { ShieldCheck, FileCheck, Users, Banknote } from "lucide-react";
 export function TrustBoosters() {
   const boosters = [
     {
-      title: "No hidden charges",
-      subtitle: "jo dikhta hai wahi lagta hai",
+      title: "Zero Hidden Fees",
+      subtitle: "Transparent, fixed quotes upfront",
       icon: Banknote,
       color: "#2997ff" // Blue
     },
     {
-      title: "Contract & NDA",
-      subtitle: "Kaam shuru hone se pehle sign",
+      title: "Contract & Mutual NDA",
+      subtitle: "Signed legally before any kickoff",
       icon: FileCheck,
       color: "#30d158" // Emerald
     },
     {
-      title: "Local Team",
-      subtitle: "Islamabad / Lahore / Karachi",
+      title: "Global Timezone Alignment",
+      subtitle: "US, UK, UAE & EU business hours",
       icon: Users,
       color: "#ff9f0a" // Orange
     },
     {
-      title: "100% Satisfaction",
-      subtitle: "ya paisay wapas",
+      title: "100% Quality Assurance",
+      subtitle: "Milestone reviews & revision rounds",
       icon: ShieldCheck,
       color: "#bf5af2" // Purple
     }
