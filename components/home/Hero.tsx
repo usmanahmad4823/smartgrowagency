@@ -129,7 +129,7 @@ export function Hero() {
           >
             <div className="pointer-events-none absolute -right-8 -top-8 h-16 w-16 rounded-full opacity-35 blur-[18px]" style={{ backgroundColor: cardThemes.blue }} />
             <div style={{ color: cardThemes.blue }} className="relative z-10">
-              <AnimatedCounter to={31} suffix="+" />
+              <AnimatedCounter to={7} />
             </div>
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
               Projects shipped with measurable lift
@@ -146,10 +146,10 @@ export function Hero() {
           >
             <div className="pointer-events-none absolute -right-8 -top-8 h-16 w-16 rounded-full opacity-35 blur-[18px]" style={{ backgroundColor: cardThemes.emerald }} />
             <div style={{ color: cardThemes.emerald }} className="relative z-10">
-              <AnimatedCounter to={100} suffix="%" />
+              <AnimatedCounter to={17000} prefix="$" />
             </div>
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
-              Clients who renew after the first win
+              Revenue generated for our clients
             </p>
           </div>
 

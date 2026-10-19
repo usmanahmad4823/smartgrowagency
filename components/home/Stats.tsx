@@ -38,7 +38,7 @@ export function Stats() {
           >
             <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full opacity-35 blur-[22px]" style={{ backgroundColor: themes.projects }} />
             <div style={{ color: themes.projects }} className="relative z-10">
-              <AnimatedCounter to={31} suffix="+" />
+              <AnimatedCounter to={7} />
             </div>
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
               Boutique projects delivered with elite execution
@@ -55,7 +55,7 @@ export function Stats() {
           >
             <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full opacity-35 blur-[22px]" style={{ backgroundColor: themes.revenue }} />
             <div style={{ color: themes.revenue }} className="relative z-10">
-              <AnimatedCounter to={4} prefix="$" suffix="M+" />
+              <AnimatedCounter to={17000} prefix="$" />
             </div>
             <p className="text-[11px] leading-snug text-[var(--text-secondary)] font-medium md:text-[12px] relative z-10">
               Direct revenue generated for our global clients

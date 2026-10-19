@@ -43,7 +43,7 @@ export function AnimatedCounter({
       className="font-display text-[28px] font-bold tracking-[-0.03em] md:text-[36px]"
     >
       {prefix}
-      {value}
+      {value.toLocaleString("en-US")}
       {suffix}
     </motion.span>
   );
