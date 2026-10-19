@@ -6,27 +6,15 @@ export async function getFeaturedProjects() {
       where: { featured: true },
       orderBy: { title: "asc" },
       take: 6,
+      select: {
+        id: true,
+        title: true,
+        category: true,
+        image: true,
+      },
     });
-  } catch {
+  } catch (error) {
+    console.error("Failed to load featured work", error);
     return [];
-  }
-}
-
-export async function getAllProjects(category?: string | null) {
-  try {
-    return await prisma.project.findMany({
-      where: category ? { category } : undefined,
-      orderBy: { title: "asc" },
-    });
-  } catch {
-    return [];
-  }
-}
-
-export async function getProjectBySlug(slug: string) {
-  try {
-    return await prisma.project.findUnique({ where: { slug } });
-  } catch {
-    return null;
   }
 }

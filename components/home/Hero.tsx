@@ -80,7 +80,7 @@ export function Hero() {
               Get Your Free Growth Plan
               <ArrowRight size={16} className="ml-1" />
             </Button>
-            <Button href="/portfolio" variant="ghost" className="h-12 px-8 text-[12px] font-bold tracking-wider hover:glass-panel-secondary">
+            <Button href="/#work" variant="ghost" className="h-12 px-8 text-[12px] font-bold tracking-wider hover:glass-panel-secondary">
               View Case Studies
             </Button>
           </motion.div>

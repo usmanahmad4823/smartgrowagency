@@ -131,7 +131,7 @@ export default function ServicesPage() {
                       <Link 
                         className="text-[14.5px] font-bold transition-colors hover:opacity-80" 
                         style={{ color: accent }} 
-                        href="/portfolio"
+                        href="/#work"
                       >
                         See related work →
                       </Link>

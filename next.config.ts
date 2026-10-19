@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/portfolio/:path*",
+        destination: "/#work",
+        permanent: true,
+      },
     ];
   },
 };

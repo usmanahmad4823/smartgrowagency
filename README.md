@@ -100,7 +100,7 @@ Set `NEXT_PUBLIC_TAWK_PROPERTY_ID` and `NEXT_PUBLIC_TAWK_WIDGET_ID` to enable Ta
 
 ## Database Seeding
 
-The seed script populates 8 portfolio case studies and 5 blog posts used across home, portfolio, and blog routes.
+The seed script populates 8 portfolio case studies displayed as featured work on the home page and 5 blog posts.
 
 ```bash
 npx prisma db seed

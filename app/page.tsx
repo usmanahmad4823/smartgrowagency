@@ -3,7 +3,7 @@ import { TrustedBy } from "@/components/home/TrustedBy";
 import { ServicesSection } from "@/components/home/Services";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { Process } from "@/components/home/Process";
-import { PortfolioPreview } from "@/components/home/Portfolio";
+import { WorkHighlights } from "@/components/home/WorkHighlights";
 import { Testimonials } from "@/components/home/Testimonials";
 import { Stats } from "@/components/home/Stats";
 import { PackagesPreview } from "@/components/home/PackagesPreview";
@@ -28,7 +28,7 @@ export default async function Home() {
       <ServicesSection />
       <WhyChooseUs />
       <Process />
-      <PortfolioPreview projects={projects} />
+      <WorkHighlights projects={projects} />
       <Testimonials />
       <Stats />
       <VideoTestimonials />
