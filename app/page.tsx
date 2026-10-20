@@ -9,7 +9,6 @@ import { Stats } from "@/components/home/Stats";
 import { PackagesPreview } from "@/components/home/PackagesPreview";
 import { CTABanner } from "@/components/home/CTABanner";
 import { VideoTestimonials } from "@/components/home/VideoTestimonials";
-import { getFeaturedProjects } from "@/lib/queries";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,8 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const projects = await getFeaturedProjects();
-
   return (
     <>
       <Hero />
@@ -28,7 +25,7 @@ export default async function Home() {
       <ServicesSection />
       <WhyChooseUs />
       <Process />
-      <WorkHighlights projects={projects} />
+      <WorkHighlights />
       <Testimonials />
       <Stats />
       <VideoTestimonials />

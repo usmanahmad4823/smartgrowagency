@@ -1,11 +1,35 @@
 import Image from "next/image";
-import type { Project } from "@prisma/client";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
 
-type FeaturedProject = Pick<Project, "id" | "title" | "category" | "image">;
+const projects = [
+  {
+    id: "ai-visibility-checker",
+    title: "AI Visibility Checker",
+    category: "Generative Engine Optimization",
+    image: "/work/ai-visibility-checker.png",
+  },
+  {
+    id: "every-posting",
+    title: "Every Posting",
+    category: "AI Content Platform",
+    image: "/work/every-posting.png",
+  },
+  {
+    id: "payrank",
+    title: "PayRank",
+    category: "Restaurant Ranking Platform",
+    image: "/work/payrank.png",
+  },
+  {
+    id: "llczilla",
+    title: "LLCZilla",
+    category: "Business Formation Services",
+    image: "/work/llczilla.png",
+  },
+];
 
-export function WorkHighlights({ projects }: { projects: FeaturedProject[] }) {
+export function WorkHighlights() {
   const cardColors = [
     "#2997ff", // Blue
     "#30d158", // Emerald
@@ -23,7 +47,7 @@ export function WorkHighlights({ projects }: { projects: FeaturedProject[] }) {
           description="Real launches with measurable outcomes—crafted for teams who care about craft and conversion."
         />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects.map((project, idx) => {
             const color = cardColors[idx % cardColors.length];
 
@@ -38,7 +62,7 @@ export function WorkHighlights({ projects }: { projects: FeaturedProject[] }) {
               >
                 <div className="pointer-events-none absolute -right-8 -top-8 h-20 w-20 rounded-full opacity-20 blur-[20px]" style={{ backgroundColor: color }} />
 
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[2.1/1] overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
